@@ -1,4 +1,4 @@
-# Action selector by TeaCupMe
+# Simple ActionSelector by TeaCupMe
 This is a simple ActionSelector to automate parsing user input and get rid of
 repeating switch-case statements.
 
