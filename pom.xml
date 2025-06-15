@@ -30,7 +30,7 @@
     <repository>
       <id>github</id>
       <name>TeaCupMe</name>
-      <url>https://maven.pkg.github.com/TeaCupMe/space.crtech.utils.app-properties</url>
+      <url>https://maven.pkg.github.com/TeaCupMe/ActionSelector</url>
     </repository>
   </distributionManagement>
 
