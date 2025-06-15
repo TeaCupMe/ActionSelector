@@ -32,7 +32,7 @@ jobs:
         GITHUB_TOKEN: ${{ github.token }}
       uses: whelk-io/maven-settings-xml-action@v22
       with:
-        servers: "[{ 'id': 'github', 'username': 'TeaCupMe', 'password':\"${{ github.token }}\"}]"
+        servers: "[{ 'id': 'github', 'username': 'TeaCupMe', 'password':\"${{ GITHUB_TOKEN }}\"}]"
         output_file: $GITHUB_WORKSPACE/settings.xml
     - name: Build with Maven
       run: mvn -B package --file pom.xml
