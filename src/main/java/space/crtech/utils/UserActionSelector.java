@@ -50,6 +50,17 @@ public abstract class UserActionSelector {
         actionsAsArrayList.get(selectedAction).act();
     }
 
+    public static void runWithStringParser(Collection<UserAction> actions, Callable<String> getInput) throws Exception {
+        run(actions, () -> {
+           String input = getInput.call();
+           try {
+              return Integer.parseInt(input);
+           } catch (NumberFormatException e) {
+               return -1;
+           }
+        });
+    }
+
     public abstract int getInput();
 
     private static boolean printlnAndReturnTrue(String prompt) {
